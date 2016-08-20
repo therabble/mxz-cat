@@ -1,41 +1,50 @@
-# MxzCat
+# MxzCat (Pronounced "mix-cat")
 "Underthinking component design."
 
 ## What is a MxzCat?
-A fundamental building block for Rabble's "MUSICatThulhu" rewrite of the MUSICat application.
-
-### The name...
-Ok. We needed a different name. CatThulhu is SO taken. “MCat” was too generic. “MsCat” probably violates some Microsoft patent. “MxCat” seemed cool but “mx” is a very populated place. “Mzcat” is camped by people whose online persona probably involves being a chick. 
-
-So. Official name is MxzCat. Pronounced “**mix**cat”.
-
-### The concept
-A MxzCat is not very groundbreaking. It’s really a fairly old-fashioned idea, just implemented strictly. (Kind of along the lines of “Marxism has never been tried.”)
+A fundamental building block for [Rabble](http://www.musicat.co/the-rabble/)'s "MUSICatThulhu" rewrite of the MUSICat application. A MxzCat can be described as "making a LEGO™ out of a _useful data component_ whose _nature and purpose are (pretty much) fixed_."
 
 The core purpose of a MxzCat is _minimizing per-customer cost_, which most definitely includes ongoing cost of ownership.
 
-The central point of the MxzCat model is _cost control via exaggerated simplicity._ This goal is played out like this:
+The central point of the MxzCat model is _cost control via exaggerated simplicity._ 
 
-We design a group of MxzCats, focusing on best balance between:
- - Maximum resilience in the face of expected problem space.
- - Minimal coupling at the MxzCat API.
- - Minimal external dependency.
+### Why do this?
 
-There is one further design principle that makes the entire concept possible: Once written to its API, a MxzCat does not change.
+#### First: because it's feasible.
+MUSICat involves a high proportion of data items that fit the description:
+ - A "useful data component" is one that recurs, in whole, thoughout the application; and that has a small, tightly definable set of interactions. In other words, a block with formal and conceptual integrity.
+ - A component whose "nature and purpose are (pretty much) fixed" is one that supports investment in a one-and-done style of programming.
 
-Design is an art not a science, so we approach this with an appealing mix of delicacy and bigotry. We follow these guides:
- - 80/20 rule. (i.e., don’t waste time studying the unlikely cases.)
- - Redefine the problem simplewards. If a design decision is teetering between simple/less capable and complicated/more capable, leave the greater capability for some other time.
- - Do Not Compromise The Rules.
- - 
-This will be **`design version 0.1`**. (Note that _we version the design specs, not the implementation._) Or rather, implementation versioning is an internal housekeeping thing.
+#### Second: because it provides pivotal business benefit.
+Most software is written without the benefit of the constraints of the MxzCat concept. Current software practice has evolved under pressure to tame the enormous complexity of fluid requirements and behavioral descriptions of arbitrary specificity. As a result, contemporary "full-stack development" is large, unwieldy, very expensive (particularly in terms of total cost of ownership), and failure-prone.
 
-We write simple reference implementations of the MxzCats. This will probably cause us to push to **`design version 0.2`**. So be it.
+If you reject the principle that a purpose-appropriate set of LEGO™-style snappable software components can rein in the cost of software development... you should stop reading. Surely you have other things to do with your day.
 
-We use the reference implementations as design/functional templates to generate real implementations.
+Rabble, though: Rabble needs to contain per-customer cost as much as possible. This is partly for business-model reasons; but primarily it's a mission statement: Rabble works to contain costs for libraries themselves. 
+
+MUSICat has evolved to the point at which it expresses a very well-suited set of core functions for its purpose. As such, it offers a very stable set of candidate component definitions.
+
+Hence this project.
+
+### The name...
+Ok. We needed a different name. "CatThulhu" was SO taken. "MCat" was too generic. "MsCat" probably violates some Microsoft patent. "MxCat" seemed cool but "mx" is a very populated googlespace. "Mzcat" seems camped by people whose online persona is chick-centric; which is in itself fine, but which carries freight that this project doesn't. 
+
+So. MxzCat. Pronounced "**mix**cat".
+
+## The MxzCat Concept
+A MxzCat is not very groundbreaking. It’s really a fairly old-fashioned idea, just seldom if ever implemented strictly. (Kind of along the lines of "Marxism has never been tried.")
+
+A MxzCat begins with a conceptual definition. From that, we derive **versioned** specifications. Implementation versioning, for a MxzCat-based application, is a mere housekeeping detail. The **specification version is the important thing**:
+
+ - It defines whether any two MxzCats can snap together.
+ - It is a potential parameter constraint for functions.
 
 A MxzCat exists in several senses:
  - **A MxzCat is a datamodel.** The datamodel represents the meaningfully persistable state of the MxzCat.
- - **A MxzCat is an API.** A _versioned_ API. The API is the only way to communicate with a MxzCat.
- - **A MxzCat is a semantics attachment map.** This map is an unambiguous designator of the datamodel components, mapped to a defined set of top-level Semantic tags.
+ - **A MxzCat is an API.** The API is the only sanctioned way to communicate with a MxzCat.
+ - **A MxzCat is a semantics attachment map.** This map is an unambiguous designator of the datamodel elements: much like XPath in an XML structure. These points may be mapped to any defined set of top-level Semantic tags.
  - **A MxzCat is an instantiated part of a running application.** The component is implementation-agnostic: it can be created in any context, in any language, on any platform, as long as the basic behavioral contract is obeyed.
+
+Here are the parts of a MxzCat
+###
+
